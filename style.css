@@ -1,0 +1,95 @@
+      *{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+				font-family: Sans-Serif;
+}
+
+.main{
+				background: black;
+				color : white ;
+				min-height : 100vh;
+				display : flex ;
+				flex-direction : column ;
+				align-items : center ;
+				justify-content: center ;
+}
+
+.main header {
+				font-size : 1.8rem;
+				font-weight : 600;
+}
+
+.main .content{
+				min-width: 300px;
+				width: 300px;
+				min-height : 300px;
+				background: #3b3b3b;
+				margin: 2rem auto;
+				border-radius: 8px;
+				box-shadow: 0px 1px 5px 2px #ffffff34;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 20px;
+				position: relative;
+}
+
+.main .content .loading{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #064c06;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  visibility: hidden;
+  z-index: 5;
+}
+
+.loading p {
+  animation-name: load;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+@keyframes load{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    color: red;
+    transform: scale(1.1);
+    letter-spacing: 2px;
+  }
+  100%{
+    color: white;
+    transform: scale(1);
+  }
+}
+
+.main .content p{
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.main .button {
+  display: flex;
+  justify-content: center;
+}
+
+.main button{
+  height: 3rem;
+  font-size: 1.3rem;
+  border: none;
+  padding: 0 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
